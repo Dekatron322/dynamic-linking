@@ -1,31 +1,28 @@
+// api/redirect.js
 export default function handler(req, res) {
 	const { link } = req.query;
 
 	if (!link) {
-		return res.status(400).json({ error: "Missing link parameter" });
+		return res.status(400).send("Missing link parameter");
 	}
 
-	try {
-		const decodedLink = decodeURIComponent(link);
-		const html = `
-      <!DOCTYPE html>
-      <html>
+	const decodedLink = decodeURIComponent(link);
+
+	// Ensure the link is properly formatted
+	const formattedLink = decodedLink.includes("make-payment")
+		? decodedLink
+		: decodedLink.replace("collect", "make-payment");
+
+	res.setHeader("Content-Type", "text/html");
+	res.send(`
+    <!DOCTYPE html>
+    <html>
       <head>
-        <meta http-equiv="refresh" content="0; url=${decodedLink}" />
-        <title>Redirecting...</title>
+        <meta http-equiv="refresh" content="0; url=${formattedLink}" />
       </head>
       <body>
-        <p>Redirecting to Otech Plus...</p>
-        <script>
-          window.location.href = "${decodedLink}";
-        </script>
+        Redirecting to payment...
       </body>
-      </html>
-    `;
-
-		res.setHeader("Content-Type", "text/html");
-		res.status(200).send(html);
-	} catch (error) {
-		res.status(500).json({ error: "Invalid link parameter" });
-	}
+    </html>
+  `);
 }
