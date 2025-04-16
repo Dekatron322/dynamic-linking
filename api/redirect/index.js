@@ -1,4 +1,3 @@
-// api/redirect.js
 export default function handler(req, res) {
 	const { link } = req.query;
 
@@ -7,18 +6,20 @@ export default function handler(req, res) {
 	}
 
 	const decodedLink = decodeURIComponent(link);
-
-	// Ensure the link is properly formatted
-	const formattedLink = decodedLink.includes("make-payment")
+	const formattedLink = decodedLink.includes("MakePayment")
 		? decodedLink
-		: decodedLink.replace("collect", "make-payment");
+		: decodedLink.replace("collect", "MakePayment");
 
 	res.setHeader("Content-Type", "text/html");
 	res.send(`
     <!DOCTYPE html>
     <html>
       <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Discover a new experience in the payment market.">
+        <link rel="icon" href="/otech logo.svg" type="image/x-icon">
         <meta http-equiv="refresh" content="0; url=${formattedLink}" />
+        <title>Otech MFB</title>
       </head>
       <body>
         Redirecting to payment...
