@@ -17,7 +17,7 @@ export default function handler(req, res) {
       <head>
         <meta charset="UTF-8">
         <meta name="description" content="Discover a new experience in the payment market.">
-        <link rel="icon" href="/otech logo.svg" type="image/x-icon">
+        <link rel="icon" href="https://raw.githubusercontent.com/Dekatron322/dynamic-linking/2e0bf619e81f007775956126e13335b732e156bd/otech%20logo.svg" type="image/x-icon">
         <meta http-equiv="refresh" content="0; url=${formattedLink}" />
         <title>Otech MFB</title>
       </head>
