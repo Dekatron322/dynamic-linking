@@ -20,12 +20,12 @@ export default function handler(req, res) {
         
         <!-- Standard Meta Tags -->
         <meta name="description" content="Discover a new experience in the payment market with Otech MFB's secure payment solutions.">
-        <link rel="icon" href="https://github.com/Dekatron322/dynamic-linking/blob/main/otech%20logo.png?raw=true" type="image/svg+xml">
+        <link rel="icon" href="https://github.com/Dekatron322/dynamic-linking/blob/main/otechlogo.png?raw=true" type="image/svg+xml">
         
         <!-- Open Graph Meta Tags (for social media sharing) -->
         <meta property="og:title" content="Otech MFB Payment">
         <meta property="og:description" content="Discover a new experience in the payment market with Otech MFB's secure payment solutions.">
-        <meta property="og:image" content="https://github.com/Dekatron322/dynamic-linking/blob/main/otech%20logo.png?raw=true">
+        <meta property="og:image" content="https://github.com/Dekatron322/dynamic-linking/blob/main/otechlogo.png?raw=true">
         <meta property="og:url" content="${formattedLink}">
         <meta property="og:type" content="website">
         
@@ -33,7 +33,7 @@ export default function handler(req, res) {
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Otech MFB Payment">
         <meta name="twitter:description" content="Discover a new experience in the payment market with Otech MFB's secure payment solutions.">
-        <meta name="twitter:image" content="https://github.com/Dekatron322/dynamic-linking/blob/main/otech%20logo.png?raw=true">
+        <meta name="twitter:image" content="https://github.com/Dekatron322/dynamic-linking/blob/main/otechlogo.png?raw=true">
         
         <!-- Redirect -->
         <meta http-equiv="refresh" content="0; url=${formattedLink}" />
