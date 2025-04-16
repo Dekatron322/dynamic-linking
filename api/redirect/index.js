@@ -13,16 +13,33 @@ export default function handler(req, res) {
 	res.setHeader("Content-Type", "text/html");
 	res.send(`
     <!DOCTYPE html>
-    <html>
+    <html prefix="og: https://ogp.me/ns#">
       <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Discover a new experience in the payment market.">
-        <link rel="icon" href="https://raw.githubusercontent.com/Dekatron322/dynamic-linking/2e0bf619e81f007775956126e13335b732e156bd/otech%20logo.svg" type="image/x-icon">
+        <title>Otech MFB - Secure Payment</title>
+        
+        <!-- Standard Meta Tags -->
+        <meta name="description" content="Discover a new experience in the payment market with Otech MFB's secure payment solutions.">
+        <link rel="icon" href="https://raw.githubusercontent.com/Dekatron322/dynamic-linking/2e0bf619e81f007775956126e13335b732e156bd/otech%20logo.svg" type="image/svg+xml">
+        
+        <!-- Open Graph Meta Tags (for social media sharing) -->
+        <meta property="og:title" content="Otech MFB Payment">
+        <meta property="og:description" content="Discover a new experience in the payment market with Otech MFB's secure payment solutions.">
+        <meta property="og:image" content="https://raw.githubusercontent.com/Dekatron322/dynamic-linking/2e0bf619e81f007775956126e13335b732e156bd/otech%20logo.svg">
+        <meta property="og:url" content="${formattedLink}">
+        <meta property="og:type" content="website">
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Otech MFB Payment">
+        <meta name="twitter:description" content="Discover a new experience in the payment market with Otech MFB's secure payment solutions.">
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/Dekatron322/dynamic-linking/2e0bf619e81f007775956126e13335b732e156bd/otech%20logo.svg">
+        
+        <!-- Redirect -->
         <meta http-equiv="refresh" content="0; url=${formattedLink}" />
-        <title>Otech MFB</title>
       </head>
       <body>
-        Redirecting to payment...
+        <p>Redirecting to payment...</p>
       </body>
     </html>
   `);
